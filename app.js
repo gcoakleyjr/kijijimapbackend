@@ -26,7 +26,7 @@ const regex = /(\r\n|\n|\r)/gm
 // app.use(express.json())
 
 app.get('/'), (req, res) => {
-    res.json('Welcome')
+    res.sendFile(path.join(__dirname, '/index.html'));
 }
 
 app.get('/api', async (req, res) => {
