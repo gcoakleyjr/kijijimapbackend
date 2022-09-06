@@ -25,6 +25,9 @@ details = []
 const regex = /(\r\n|\n|\r)/gm
 // app.use(express.json())
 
+app.get('/'), (req, res) => {
+    res.json('Welcome')
+}
 
 app.get('/api', async (req, res) => {
     const { formData } = req.query
